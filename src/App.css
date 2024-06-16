@@ -1,38 +1,281 @@
-.App {
+@font-face {
+  font-family: "gg sans";
+  src: url(./font/gg\ sans\ Medium.ttf)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  background-color: #484cec;
+  background-image: url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/644fab4da9dbd93a7dfae97b_e6d57714479874c665b36c7adee76b1d.svg)
+
+}
+
+
+.text-intro-container {
+  width: 2000px;
+  position: relative;
+  padding: 20px 0px 160px 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-intro {
+  margin-bottom: 24px;
+  font-family: "Alfa Slab One";
+  font-size: 50px;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.text-intro {
+  max-width: 780px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.button-intro-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  margin-top: 24px;
+}
+
+.opendis-button, .download-button {
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: white;
+  border: none;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+}
+.download-button {
+  transition: color 0.15s, box-shadow 0.15s;
+}
+
+.download-button:hover {
+  color: #5865f2;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.opendis-button {
+  transition: background-color 0.15s, box-shadow 0.15s;
+  color: white;
+  background-color: rgb(37, 37, 37);
+}
+
+.opendis-button:hover {
+  background-color: rgb(46, 46, 46);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-button span {
+  margin-left: 15px;
+}
+
+.image-right {
+  z-index: 0;
+  max-width: 100%;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+}
+
+.image-left {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+@media (width <= 1970px) {
+  .image-right {
+    right: -100px;
+  }
+
+  .image-left {
+    left: -150px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (width <= 1650px) {
+  .image-right {
+    right: -250px;
+    width: 520px;
+  }
+
+  .image-left {
+    left: -250px;
+    width: 520px;
+  }
+}
+
+.section3-container {
+  background-color: rgb(245, 245, 245);
+}
+
+.section2-container, 
+.section3-container,
+.section4-container {
+  padding-top: 120px;
+  padding-bottom: 130px;
+}
+
+.section2-container-grid,
+.section3-container-grid, 
+.section4-container-grid {
+  margin: 0px auto;
+  max-width: 1180px;
+  opacity: 0;
+  transform: translate(0%, 5%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s, transform 2s;
+}
+
+.text-container {
+  max-width: 400px;
+}
+
+.title-section2,
+.title-section3,
+.title-section4 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 50px;
+  margin-bottom: 24px;
+}
+
+.text-section2,
+.text-section3, 
+.text-section4 {
+  font-weight: 100;
+  font-size: 20px;
+  color: gray;
+}
+.img-section2,
+.img-section3, 
+.img-section4 {
+  width: 100%;
+}
+
+.section5-container {
+  background-color: rgb(245, 245, 245);
+  padding: 120px 30px;
+}
+
+.section5-container-flex {
+  opacity: 0;
+  transform: translate(0%, 5%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: opacity 2s, transform 2s;
+}
+
+.title-section5 {
+  text-align: center;
+  font-family: "Alfa Slab One";
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.text-section5 {
+  color: gray;
+  font-size: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.ready-to-start {
+  position: relative;
+  display: flex;
+  height: 91px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.img-up {
+  width: 100%;
+  max-width: 990px;
+  position: absolute;
+}
+
+.img-section5 {
+  width:100%;
+}
+
+
+.img-section5-container {
+  max-width: 1180px;
+}
+
+.ready-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.download-button-section5 {
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 30px;
   color: white;
+  background-color: #5865f2;
+  background-image: url(https://assets-global.website-files.com/6257adef93867e50d84d30e2/6582b262413a0600bad70006_download.svg);
+  background-position: 10% 50%;
+  background-repeat: no-repeat;
+  transition: opacity 0.15s, box-shadow 0.15s;
 }
 
-.App-link {
-  color: #61dafb;
+.download-button-section5:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-download {
+  margin-left: 40px;
 }
+
+
+.show-content {
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+

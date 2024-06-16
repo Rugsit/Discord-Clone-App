@@ -1,0 +1,132 @@
+.footer-container {
+  background-color: #23272A;
+  padding-bottom: 64px;
+}
+
+.footer-container-grid {
+  margin: 0px auto;
+  padding: 50px 50px 0px 50px;
+  max-width: 1180px;
+  height: auto;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+li {
+  font-size: 15px;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.lang-app-container {
+  grid-column: span 4;
+} 
+
+.choose-lang-container {  
+  margin: 24px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.choose-lang-container p {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.app-container {
+  display: flex;
+  margin-top: 48px;
+  
+}
+
+.app-container img {
+  margin-right: 20px;
+}
+
+.img-flag-en {
+  margin-right: 10px;
+  width: 24px;
+  height: 16px;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  width: 18px;
+  height: 6px;
+}
+
+.grid1, 
+.grid2, 
+.grid3, 
+.grid4 {
+  grid-column: span 2;
+}
+
+.title-grid {
+  color: #5865F2;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.footerline {
+  max-width: 1180px;
+  border: 1px solid #5865f2;
+  border-width: 1px 0px 0px 0px ;
+  margin: 32px auto;
+  padding-top: 32px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.open-discord-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  padding: 7px 16px;
+  background-color: #5865F2;
+  color: white;
+  transition: background-color 0.15s;
+}
+
+.open-discord-button:hover {
+  background-color: #9098f5;
+}
+
+
+@media (width <= 992px) {
+  .footer-container-grid {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 200px 1fr;
+  }
+
+  .lang-app-container {
+    grid-column: span 3;
+  }
+
+  .grid3 {
+    grid-column: 4 / 6;
+  }
+}
+
+@media (width <= 700px) {
+  .footer-container-grid {
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20% 30% 500px;
+  }
+
+  .grid1, 
+  .grid2, 
+  .grid3, 
+  .grid4 {
+    grid-column: span 1;
+  }
+
+  .lang-app-container {
+    grid-column: span 2;
+  }
+}

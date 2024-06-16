@@ -1,0 +1,273 @@
+
+.NavBar-container {
+  z-index: 10;
+  right: 5%;
+  left: 5%;
+  top: 0px;
+  max-width: 1180px;
+  color: white;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: absolute;
+  transition: background-color 0.15s;
+}
+
+.discord-logo-disable {
+  display: none;
+}
+
+.discord-logo-menubar {
+  color: black;
+  width: 128px;
+}
+
+.x {
+  margin: 0px 15px 0px 0px;
+  width: 24px;
+}
+
+.tab-menu-container { 
+  display: none;
+}
+
+.tab-menu-header {
+  border: 1px solid rgb(238, 238, 238);
+  border-width: 0px 0px 1px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.list-menubar-nav p{
+  text-decoration: none;
+  height: 40px;
+  font-weight: 400;
+  padding: 8px 16px;
+  color: black;
+}
+
+.download {
+  text-decoration: none;
+}
+
+.button-menubar-nav-container {
+  margin-top: 70px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 24px 24px 100px 24px;
+  background-color: white;
+  box-shadow: 0px -30px 50px rgba(255, 255, 255);
+  clip-path: inset(-100px 0px 0px 0px);
+}
+
+.download-icon-nav {
+  margin-right: 8px;
+}
+
+.button-menubar-nav {
+  background-color: #5865f2;
+  font-weight: 500;
+  border-radius: 20px;
+  color: white;
+  margin: 0px auto;
+  width: 300px;
+  padding: 7px 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.safety {
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.discord-logo {
+  color: black;
+  cursor: pointer;
+  height: 35px;
+  width: 100%;
+  max-width: 150px;
+  transform: scale(1);
+}
+
+.link-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  margin: 0px 10px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.open-button {
+  font-weight: 700;
+  text-wrap: nowrap;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s, box-shadow 0.15s;
+  margin-right: 15px;
+}
+
+.open-button:hover {
+  color: #5865f2;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button-container {
+  display: flex;
+}
+
+.menu-bar {
+  display: none;
+}
+
+@media (width <= 992px) {
+  .tab-menu-container { 
+    display: block;
+    transform: translate(350px, 0px);
+    border-radius: 10px 0px 0px 10px;
+    padding: 24px 0px 120px 24px;
+    background-color: white;
+    right: 0px;
+    width: 350px;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    transition: transform 0.3s;
+  }
+  
+  .tab-menu-container-show {
+    transform: translate(0px, 0px);
+  }
+
+  .showBackgroundNav {
+    background-color: #5865f2;
+  }
+
+  .open-button {
+    display: none;
+  }
+
+  .menu-bar {
+    display: inline-block;
+  }
+
+  .link-container {
+    display: none;
+  }
+
+  .NavBar-container {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    padding: 0px 35px;
+  }
+
+  .image-right {
+    display: none;
+  }
+
+  .image-left {
+    position: static;
+    width: 100%;
+  }
+
+  .text-intro-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    text-align: left;
+    align-items: start;
+  }
+
+  .section2-container-grid,
+  .section3-container-grid, 
+  .section4-container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title-section2,
+  .title-section3,
+  .title-section4 {
+    font-size: 32px;
+    line-height: 30px;
+  }
+
+  .text-container {
+    grid-row: 2 / 2;
+    margin: 0px 25px;
+    max-width: 700px;
+  }
+
+  .img-section2, 
+  .img-section3, 
+  .img-section4 {
+    max-width: 700px;
+  }
+
+  .text-section2,
+  .text-section3, 
+  .text-section4 {
+    font-size: 17px;
+  }
+
+  .title-section5 {
+    font-size: 36px;
+  }
+
+  .text-section5 {
+    font-size: 17px;
+  }
+}
+
+@media (width <= 700px) {
+  .button-intro-container {
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .title-section2,
+  .title-section3,
+  .title-section4 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .title-section5 {
+    font-size: 32px;
+  }
+
+}
+
+@media (width <= 650px) {
+  .title-intro {
+    font-size: 40px;
+  }
+
+  .text-intro {
+    font-size: 17px;
+  }
+}
