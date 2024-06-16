@@ -7,7 +7,6 @@
 - Full Responsive web design
 - use React router dom
 
-
 ## Technologies
 
 - React js
@@ -16,4 +15,4 @@
 
 ## Link
 
-✅:
+✅: https://discord-clone-app-slgy.onrender.com
